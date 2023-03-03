@@ -46,6 +46,8 @@ namespace API
 
             app.UseStaticFiles();
 
+            app.UseCors("CorsPolicy");
+
             app.UseAuthorization();
 
             using var scope=app.ApplicationServices.CreateScope();
